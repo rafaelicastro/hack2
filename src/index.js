@@ -46,6 +46,8 @@ const theme = extendTheme({
 	},
 })
 
+"use client";
+
 root.render( 
 //	<React.StrictMode>
 		<ChakraProvider theme={theme}>
