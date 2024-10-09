@@ -1,17 +1,59 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { HashRouter } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
+import Fonts from './Fonts';
+
+import { ColorModeScript } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react';
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const fonts = {
+// 	...chakraTheme.fonts,
+// 	body: `MonacoB`,
+// 	heading: `MonacoB`
+// }
+
+// const theme = {
+// 	styles: {
+// 		global: {
+// 			'html, body': {
+// 				// bg: '#FEFFEF',
+// 				bg: 'rgb(252, 247, 229)',
+// 				fontFamily: 'MonacoB', 
+// 				// use terminal font
+// 			}
+// 		}
+// 	}
+// }
+
+const config = {
+	initalColorMode: 'light',
+	useSystemColorMode: true,
+}
+
+const theme = extendTheme({
+	config,
+	fonts: {
+		heading: `'Source Code Pro', sans-serif`,
+		body: `'Source Code Pro', sans-serif`
+	},
+})
+
+root.render( 
+	<React.StrictMode>
+		<ChakraProvider theme={theme}>
+		  <Fonts />
+		  <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+			    <HashRouter basename={"/"}>
+					<App />
+			    </HashRouter>
+		</ChakraProvider>
+	</React.StrictMode>
+);
