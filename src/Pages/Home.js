@@ -15,7 +15,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 // import { useTimeout } from "react-use"; // TODO make sure works
-import { useTimeout } from '@uidotdev/usehooks';
+// import { useTimeout } from '@uidotdev/usehooks';
 
 function DelayedComponent({ hasLoaded }) {
 
@@ -115,11 +115,11 @@ function DelayedComponent({ hasLoaded }) {
 
 export function Home() {
 	
-	const [hasLoaded, setHasLoaded] = React.useState(false);
+	// const [hasLoaded, setHasLoaded] = React.useState(false);
 
-	useTimeout(() => {
-		setHasLoaded(!hasLoaded);
-	}, 4500);
+	// useTimeout(() => {
+	// 	setHasLoaded(!hasLoaded);
+	// }, 4500);
 
 	// const time = useTimeout(() => { setHasLoaded(true) }, 4);
 
@@ -144,7 +144,8 @@ export function Home() {
 				</Button>
 			</Flex>
 
-			{<DelayedComponent hasLoaded={hasLoaded}/>}
+			{/* <DelayedComponent hasLoaded={hasLoaded}/> */}
+			<DelayedComponent hasLoaded={true} />
 			
 		</>
 	);

@@ -16,11 +16,12 @@ export function Info() {
             <RouterLink to={'/'}><Text marginTop={'20px'} marginLeft={'20px'}> –– Back </Text></RouterLink>
 
             <VStack>
-                <Text marginX={"120px"} marginTop={"50px"}>Hack ^ 2 is a hackathon organized by the members of Hackley CS Club and Girls Who Code. 
+                <Text marginX={"120px"} marginTop={"50px"}>Hack ^ 2 is a hackathon organized by the members of Hackley CS Club and Girls Who Code,
+                     open to any interested high schoolers. 
                     Our mission is to organize a competition that is educational and fun 
                     using the space in the new Center for Creative Arts and Technology. 
                     2024 marks our inaugural year, and we hope to host this competition annually going forward. 
-                    The prompt for this year is TBA, and we hope to see everyone on <Link href={"https://www.google.com"} textDecoration={'underline'}>January 14, 2025 @ The CCAT</Link>.</Text>
+                    The prompt for this year is EdTech, and we hope to see everyone on <Link href={"https://www.google.com"} textDecoration={'underline'}>January 14, 2025 @ The CCAT</Link>.</Text>
 
                 <Text paddingTop={'25px'}></Text>
 

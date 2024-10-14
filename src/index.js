@@ -46,7 +46,7 @@ const theme = extendTheme({
 	},
 })
 
-"use client";
+// "use client";
 
 root.render( 
 //	<React.StrictMode>
